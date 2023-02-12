@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+    <script src="carousel.js"></script>
+</head>
+
+<body>
+    <h1>Demo Carousel</h1>
+    <h2>Slide effect with arrows and nav</h2>
+    <div class="carousel">
+        <button id="left" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </button>
+        <div class="carousel-container">
+            <div id="carousel" class="carousel-main slide-effect">
+                <div class="carousel-item">Item 1</div>
+                <div class="carousel-item">Item 2</div>
+                <div class="carousel-item">Item 3</div>
+                <div class="carousel-item">Item 4</div>
+                <div class="carousel-item">Item 5</div>
+                <div class="carousel-item">Item 6</div>
+            </div>
+            <div id="carousel-nav" class="carousel-nav"></div>
+        </div>
+        <button id="right" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+        </button>
+    </div>
+    <h2>Adding auto change and loop (no nav)</h2>
+    <div class="carousel">
+        <button id="left2" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </button>
+        <div class="carousel-container">
+            <div id="carousel2" class="carousel-main slide-effect">
+                <div class="carousel-item">Item 1</div>
+                <div class="carousel-item">Item 2</div>
+                <div class="carousel-item">Item 3</div>
+                <div class="carousel-item">Item 4</div>
+                <div class="carousel-item">Item 5</div>
+                <div class="carousel-item">Item 6</div>
+            </div>
+        </div>
+        <button id="right2" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+        </button>
+    </div>
+    <h2>Fade effect without arrows</h2>
+    <div class="carousel">
+        <div class="carousel-container">
+            <div id="carousel3" class="carousel-main fade-effect">
+                <div class="carousel-item">Item 1</div>
+                <div class="carousel-item">Item 2</div>
+                <div class="carousel-item">Item 3</div>
+                <div class="carousel-item">Item 4</div>
+                <div class="carousel-item">Item 5</div>
+                <div class="carousel-item">Item 6</div>
+            </div>
+            <div id="carousel-nav3" class="carousel-nav"></div>
+        </div>
+    </div>
+    <h2>Fade effect with arrows</h2>
+    <div class="carousel">
+        <button id="left3" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </button>
+        <div class="carousel-container">
+            <div id="carousel4" class="carousel-main fade-effect">
+                <div class="carousel-item">Item 1</div>
+                <div class="carousel-item">Item 2</div>
+                <div class="carousel-item">Item 3</div>
+                <div class="carousel-item">Item 4</div>
+                <div class="carousel-item">Item 5</div>
+                <div class="carousel-item">Item 6</div>
+            </div>
+        </div>
+        <button id="right3" class="carousel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        new Carousel("carousel", "carousel-item", "carousel-nav", "left", "right", false, 0, false, true);
+        new Carousel("carousel2", "carousel-item", null, "left2", "right2", true, 5000, true, true);
+        new Carousel("carousel3", "carousel-item", "carousel-nav3", null, null, true, 5000, true, true);
+        new Carousel("carousel4", "carousel-item", null, "left3", "right3", true, 5000, true, true);
+    </script>
+</body>
+
+</html>
