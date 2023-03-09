@@ -108,6 +108,10 @@
         new Carousel("carousel", "carousel-item", "carousel-nav", "left", "right", false, 0, false, true);
         new Carousel("carousel2", "carousel-item", null, "left2", "right2", true, 5000, true, true);
         new Carousel("carousel3", "carousel-item", "carousel-nav3", null, null, true, 5000, true, true);
+        const carousel3 = document.querySelector("#carousel3");
+        carousel3.addEventListener("carouselChange", (e) => {
+            console.log(e.detail);
+        });
         new Carousel("carousel4", "carousel-item", null, "left3", "right3", true, 5000, true, true);
     </script>
 </body>

@@ -86,8 +86,6 @@ class Carousel {
             return;
         }
 
-
-
         this.itemWidth = parseInt(window.getComputedStyle(this.items[0]).getPropertyValue('width'));
         this.carouselGap = parseInt(window.getComputedStyle(this.carousel).getPropertyValue('gap')) || 0;
 
@@ -202,6 +200,15 @@ class Carousel {
         if (this.autoChange) {
             this.timeout = setTimeout(this.automaticChange.bind(this), this.autoChangeDelay);
         }
+
+        const event = new CustomEvent('carouselChange', {
+            detail: {
+                carousel: this.carousel,
+                activeItem: this.carousel.querySelector('.active'),
+                direction: 'left',
+            },
+        });
+        this.carousel.dispatchEvent(event);
     }
 
     right() {
@@ -236,6 +243,15 @@ class Carousel {
         if (this.autoChange) {
             this.timeout = setTimeout(this.automaticChange.bind(this), this.autoChangeDelay);
         }
+
+        const event = new CustomEvent('carouselChange', {
+            detail: {
+                carousel: this.carousel,
+                activeItem: this.carousel.querySelector('.active'),
+                direction: 'right',
+            },
+        });
+        this.carousel.dispatchEvent(event);
     }
 
     updateNav() {
@@ -247,7 +263,6 @@ class Carousel {
     }
 
     change(index) {
-        clearTimeout(this.timeout);
 
         const actualIndex = Array.prototype.indexOf.call(this.items, this.carousel.querySelector('.active'));
 
@@ -267,10 +282,6 @@ class Carousel {
 
         if (!this.loop && this.leftButton && this.rightButton) {
             this.updateArrows();
-        }
-
-        if (this.autoChange) {
-            this.timeout = setTimeout(this.automaticChange.bind(this), this.autoChangeDelay);
         }
     }
 
